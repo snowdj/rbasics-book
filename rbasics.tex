@@ -199,15 +199,18 @@ important are:
   you'll need to carefully copy-and-paste your analysis into your text
   editors from potentially beginning to end. Anyone that has done this
   sort of copy-and-pasting knows that it is prone to errors and tedious.
+
+  If you use the workflows described in this book, your analyses will be
+  reproducible so you don't need to worry about these copy-and-pasting
+  issues. As you might guess have guessed by now, it would be much
+  better to be able to update your code/data inputs and rerun all of
+  your analysis. Reproducibility also helps you as a programmer since
+  your greatest collaborator will probably be yourself a few months or
+  years down the road. Instead of having to carefully write down all the
+  steps you took to find the right drop-down menu option, your entire
+  code is stored.
 \item
   Using R makes collaboration easier.
-
-  It would be much better to be able to update your code/data inputs and
-  rerun all of your analysis. Reproducibility also helps you as a
-  programmer since your greatest collaborator will probably be yourself
-  a few months or years down the road. Instead of having to carefully
-  write down all the steps you took to find the right drop-down menu
-  option, your entire code is stored.
 
   This also helps you with collaboration since, as you will see later,
   you can share an RMarkdown file containing all of your analysis,
@@ -225,7 +228,7 @@ important are:
   frequently (almost on a daily basis) Google things like ``How do I
   make a side-by-side boxplot in R coloring by a third variable?''.
   You'll become better at working with R by reaching out to others for
-  help.
+  help and by answering questions that others have.
 \item
   Struggling through programming helps you learn.
 
@@ -261,17 +264,87 @@ important are:
 \textbf{Last updated:}
 
 \begin{verbatim}
-## [1] "Saturday, August 13, 2016 16:01:26 PDT"
+## [1] "Saturday, August 13, 2016 16:45:19 PDT"
 \end{verbatim}
 
 \chapter{R and RStudio Basics}\label{rstudiobasics}
 
+\section{What is R?}\label{what-is-r}
+
+In Chapter \ref{whyR}, I discussed many of the reasons why you should be
+doing your analyses (especially those of the data type) using R. If you
+skipped over that chapter in the hopes of just hopping into learning
+about R, I request that you to go back to it and carefully read it over.
+As you begin working with R, it is especially important to review that
+introductory chapter.
+
+\subsection{R beginnings}\label{r-beginnings}
+
+R was created by a group of statisticians who wanted an open-source
+alternative to the costly proprietary options. Being created by
+statisticians (instead of computer scientists) means that R has some
+quirky aspects to it that take a little bit of time to get used to.
+We'll see that many packages have been developed to help with this and
+that you don't need to have advanced degrees in Statistics to be able to
+work with R now.
+
+Getting back to the development of R\ldots{} R was created by
+\textbf{R}oss Ihaka and \textbf{R}obert Gentleman in New Zealand at the
+University of Auckland. It is a spin-off of the S programming language
+and is named partly after the first names of its developers (as you can
+see in the emphasis above). The beginning ideas for creating R came in
+1992 and the first version of R was released in 1994. You can find much
+more about the background of R and its features as well as its
+connections to the S language on its
+\href{https://en.wikipedia.org/wiki/R_(programming_language)}{Wikipedia
+page}.
+
+\subsection{R packages}\label{r-packages}
+
+I first learned to use R while a graduate student at Northern Arizona
+University from Philip Turk in 2007. At the time, I never thought that R
+would have exploded in users as we have seen in the last few years
+before 2016. I never would have thought that students taking an
+introductory statistics course would be encouraged to learn to use R. In
+2007, it was still largely a language used by statisticians to do
+analyses.
+
+Getting used to the syntax for producing plots and working with data was
+especially tricky for those with little to no programming experience. So
+what has changed since 2007 about learning R?
+
+I believe one of the biggest developments has been the creation of
+packages to make R easier to work with for newbies. Packages are created
+by users of R to increase the functionality of the base R installation.
+Packages created by Hadley Wickham and others recently have greatly
+expanded the capabilities of R, while also working to make beginning
+with R simpler. From the Wikipedia page referenced earlier, as of
+January 2016, there were around 7800 additional R packages available on
+common R repositories.\footnote{You'll see how to download these
+  packages via \texttt{install.packages("dplyr")} and load them into
+  your current R working environment via \texttt{library("dplyr")}, for
+  example, in Chapter \ref{rmdanal}.}
+
+Another great development is the graphical user interface called RStudio
+and the package developed by the those that work for RStudio, Inc.
+called \texttt{rmarkdown}. We will discuss \texttt{rmarkdown} (also
+referred to as RMarkdown) in a Chapter \ref{rmarkdown}, and will now
+focus on discussing RStudio.
+
+\section{What is RStudio?}\label{what-is-rstudio}
+
+\section{Installing R and RStudio}\label{installing-r-and-rstudio}
+
 \begin{itemize}
 \tightlist
 \item
-  What is R? What is RStudio?
-\item
   Installing R and RStudio directions with screenshots
+\end{itemize}
+
+\section{Working in RStudio}\label{working-in-rstudio}
+
+\begin{itemize}
+\tightlist
 \item
   Screenshots of RStudio frames?
 \end{itemize}
@@ -279,7 +352,7 @@ important are:
 \textbf{Last updated:}
 
 \begin{verbatim}
-## [1] "Saturday, August 13, 2016 16:01:26 PDT"
+## [1] "Saturday, August 13, 2016 16:45:19 PDT"
 \end{verbatim}
 
 \chapter{R Markdown}\label{rmarkdown}

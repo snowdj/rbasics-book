@@ -69,7 +69,15 @@
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
 <li class="chapter" data-level="2" data-path="whyR.html"><a href="whyR.html"><i class="fa fa-check"></i><b>2</b> Why R?</a></li>
-<li class="chapter" data-level="3" data-path="rstudiobasics.html"><a href="rstudiobasics.html"><i class="fa fa-check"></i><b>3</b> R and RStudio Basics</a></li>
+<li class="chapter" data-level="3" data-path="rstudiobasics.html"><a href="rstudiobasics.html"><i class="fa fa-check"></i><b>3</b> R and RStudio Basics</a><ul>
+<li class="chapter" data-level="3.1" data-path="rstudiobasics.html"><a href="rstudiobasics.html#what-is-r"><i class="fa fa-check"></i><b>3.1</b> What is R?</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="rstudiobasics.html"><a href="rstudiobasics.html#r-beginnings"><i class="fa fa-check"></i><b>3.1.1</b> R beginnings</a></li>
+<li class="chapter" data-level="3.1.2" data-path="rstudiobasics.html"><a href="rstudiobasics.html#r-packages"><i class="fa fa-check"></i><b>3.1.2</b> R packages</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="rstudiobasics.html"><a href="rstudiobasics.html#what-is-rstudio"><i class="fa fa-check"></i><b>3.2</b> What is RStudio?</a></li>
+<li class="chapter" data-level="3.3" data-path="rstudiobasics.html"><a href="rstudiobasics.html#installing-r-and-rstudio"><i class="fa fa-check"></i><b>3.3</b> Installing R and RStudio</a></li>
+<li class="chapter" data-level="3.4" data-path="rstudiobasics.html"><a href="rstudiobasics.html#working-in-rstudio"><i class="fa fa-check"></i><b>3.4</b> Working in RStudio</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a></li>
 <li class="chapter" data-level="5" data-path="rmdanal.html"><a href="rmdanal.html"><i class="fa fa-check"></i><b>5</b> Introductory R analysis using R Markdown</a></li>
 <li class="chapter" data-level="6" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>6</b> References</a></li>
@@ -95,14 +103,46 @@
             <section class="normal" id="section-">
 <div id="rstudiobasics" class="section level1">
 <h1><span class="header-section-number">3</span> R and RStudio Basics</h1>
+<div id="what-is-r" class="section level2">
+<h2><span class="header-section-number">3.1</span> What is R?</h2>
+<p>In Chapter <a href="whyR.html#whyR">2</a>, I discussed many of the reasons why you should be doing your analyses (especially those of the data type) using R. If you skipped over that chapter in the hopes of just hopping into learning about R, I request that you to go back to it and carefully read it over. As you begin working with R, it is especially important to review that introductory chapter.</p>
+<div id="r-beginnings" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> R beginnings</h3>
+<p>R was created by a group of statisticians who wanted an open-source alternative to the costly proprietary options. Being created by statisticians (instead of computer scientists) means that R has some quirky aspects to it that take a little bit of time to get used to. We’ll see that many packages have been developed to help with this and that you don’t need to have advanced degrees in Statistics to be able to work with R now.</p>
+<p>Getting back to the development of R… R was created by <strong>R</strong>oss Ihaka and <strong>R</strong>obert Gentleman in New Zealand at the University of Auckland. It is a spin-off of the S programming language and is named partly after the first names of its developers (as you can see in the emphasis above). The beginning ideas for creating R came in 1992 and the first version of R was released in 1994. You can find much more about the background of R and its features as well as its connections to the S language on its <a href="https://en.wikipedia.org/wiki/R_(programming_language)">Wikipedia page</a>.</p>
+</div>
+<div id="r-packages" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> R packages</h3>
+<p>I first learned to use R while a graduate student at Northern Arizona University from Philip Turk in 2007. At the time, I never thought that R would have exploded in users as we have seen in the last few years before 2016. I never would have thought that students taking an introductory statistics course would be encouraged to learn to use R. In 2007, it was still largely a language used by statisticians to do analyses.</p>
+<p>Getting used to the syntax for producing plots and working with data was especially tricky for those with little to no programming experience. So what has changed since 2007 about learning R?</p>
+<p>I believe one of the biggest developments has been the creation of packages to make R easier to work with for newbies. Packages are created by users of R to increase the functionality of the base R installation. Packages created by Hadley Wickham and others recently have greatly expanded the capabilities of R, while also working to make beginning with R simpler. From the Wikipedia page referenced earlier, as of January 2016, there were around 7800 additional R packages available on common R repositories.<a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<p>Another great development is the graphical user interface called RStudio and the package developed by the those that work for RStudio, Inc. called <code>rmarkdown</code>. We will discuss <code>rmarkdown</code> (also referred to as RMarkdown) in a Chapter <a href="rmarkdown.html#rmarkdown">4</a>, and will now focus on discussing RStudio.</p>
+</div>
+</div>
+<div id="what-is-rstudio" class="section level2">
+<h2><span class="header-section-number">3.2</span> What is RStudio?</h2>
+</div>
+<div id="installing-r-and-rstudio" class="section level2">
+<h2><span class="header-section-number">3.3</span> Installing R and RStudio</h2>
 <ul>
-<li>What is R? What is RStudio?</li>
 <li>Installing R and RStudio directions with screenshots</li>
+</ul>
+</div>
+<div id="working-in-rstudio" class="section level2">
+<h2><span class="header-section-number">3.4</span> Working in RStudio</h2>
+<ul>
 <li>Screenshots of RStudio frames?</li>
 </ul>
 <p><strong>Last updated:</strong></p>
-<pre><code>## [1] &quot;Saturday, August 13, 2016 16:05:15 PDT&quot;</code></pre>
+<pre><code>## [1] &quot;Saturday, August 13, 2016 16:45:19 PDT&quot;</code></pre>
 
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p>You’ll see how to download these packages via <code>install.packages(&quot;dplyr&quot;)</code> and load them into your current R working environment via <code>library(&quot;dplyr&quot;)</code>, for example, in Chapter <a href="rmdanal.html#rmdanal">5</a>.<a href="rstudiobasics.html#fnref1">↩</a></p></li>
+</ol>
 </div>
             </section>
 
