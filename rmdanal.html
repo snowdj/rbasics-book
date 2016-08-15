@@ -27,6 +27,11 @@
 
 <meta name="date" content="2016-08-14">
 
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -80,11 +85,17 @@
 <li class="chapter" data-level="3.3" data-path="rstudiobasics.html"><a href="rstudiobasics.html#working-in-rstudio-server"><i class="fa fa-check"></i><b>3.3</b> Working in RStudio Server</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="rstudiobasics.html"><a href="rstudiobasics.html#logging-in-and-initial-screen"><i class="fa fa-check"></i><b>3.3.1</b> Logging in and initial screen</a></li>
 <li class="chapter" data-level="3.3.2" data-path="rstudiobasics.html"><a href="rstudiobasics.html#basic-workflow"><i class="fa fa-check"></i><b>3.3.2</b> Basic workflow</a></li>
-<li class="chapter" data-level="3.3.3" data-path="rstudiobasics.html"><a href="rstudiobasics.html#sharing-rstudio-projects"><i class="fa fa-check"></i><b>3.3.3</b> Sharing RStudio Projects</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="rstudiobasics.html"><a href="rstudiobasics.html#rstudio-layout"><i class="fa fa-check"></i><b>3.4</b> RStudio Layout</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="rstudiobasics.html"><a href="rstudiobasics.html#code-editor-view-window"><i class="fa fa-check"></i><b>3.4.1</b> Code Editor / View Window</a></li>
+<li class="chapter" data-level="3.4.2" data-path="rstudiobasics.html"><a href="rstudiobasics.html#environment-history"><i class="fa fa-check"></i><b>3.4.2</b> Environment / History</a></li>
+<li class="chapter" data-level="3.4.3" data-path="rstudiobasics.html"><a href="rstudiobasics.html#console"><i class="fa fa-check"></i><b>3.4.3</b> Console</a></li>
+<li class="chapter" data-level="3.4.4" data-path="rstudiobasics.html"><a href="rstudiobasics.html#the-help-function"><i class="fa fa-check"></i><b>3.4.4</b> The <code>help</code> function (<code>?</code>)</a></li>
+<li class="chapter" data-level="3.4.5" data-path="rstudiobasics.html"><a href="rstudiobasics.html#the-bottom-right-pane"><i class="fa fa-check"></i><b>3.4.5</b> The bottom right pane</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="rmarkdown.html"><a href="rmarkdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a></li>
-<li class="chapter" data-level="5" data-path="rmdanal.html"><a href="rmdanal.html"><i class="fa fa-check"></i><b>5</b> Introductory R analysis using R Markdown</a></li>
+<li class="chapter" data-level="5" data-path="rmdanal.html"><a href="rmdanal.html"><i class="fa fa-check"></i><b>5</b> Introductory R Analysis using R Markdown</a></li>
 <li class="chapter" data-level="6" data-path="errors.html"><a href="errors.html"><i class="fa fa-check"></i><b>6</b> Deciphering Common R Errors</a></li>
 <li class="chapter" data-level="7" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
 <li class="divider"></li>
@@ -110,7 +121,7 @@
 
             <section class="normal" id="section-">
 <div id="rmdanal" class="section level1">
-<h1><span class="header-section-number">5</span> Introductory R analysis using R Markdown</h1>
+<h1><span class="header-section-number">5</span> Introductory R Analysis using R Markdown</h1>
 <ul>
 <li>A beginning workflow</li>
 <li>“File organization and naming are powerful weapons against chaos.” - Jenny Bryan</li>
@@ -127,7 +138,7 @@
 <li>R Markdown templates</li>
 </ul>
 <p><strong>Last updated:</strong></p>
-<pre><code>## [1] &quot;By Chester on Sunday, August 14, 2016 14:00:58 PDT&quot;</code></pre>
+<pre><code>## [1] &quot;By Chester on Sunday, August 14, 2016 17:25:06 PDT&quot;</code></pre>
 
 </div>
             </section>
@@ -174,6 +185,17 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
