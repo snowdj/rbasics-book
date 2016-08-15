@@ -38,8 +38,8 @@ MathJax.Hub.Config({
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-
-<link rel="next" href="2-whyR.html">
+<link rel="prev" href="3-rstudiobasics.html">
+<link rel="next" href="5-rmdanal.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -123,27 +123,51 @@ MathJax.Hub.Config({
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">Getting used to R, RStudio, and R Markdown</h1>
-<h4 class="author"><em>Chester Ismay</em></h4>
-<h4 class="date"><em>2016-08-14</em></h4>
+<div id="rmarkdown" class="section level1">
+<h1><span class="header-section-number">4</span> R Markdown</h1>
+<p>R Markdown provides an easy way to produce a rich, fully-documented reproducible analysis. It allows its user to share a single file that contains all of the commentary, R code, and metadata needed to reproduce the analysis from beginning to end. R Markdown allows for chunks of R code to be included along with Markdown text to produce a nicely formatted HTML, PDF, or Word file without having to know any HTML or <span class="math inline">\(\LaTeX\)</span> code or have to fuss with getting the formatting just right in a Microsoft Word DOCX file.</p>
+<p>One R Markdown file can generate a variety of different formats and all of this is done in a single text file with a few bits of formatting. I think you’ll be pleasantly surprised at how easy it is to write an R Markdown document after your first few encounters.</p>
+<div id="fixing-errors-in-an-r-markdown-file" class="section level2">
+<h2><span class="header-section-number">4.1</span> Fixing errors in an R Markdown file</h2>
+<p>We now shift back to the R Markdown file created in Chapter @(rstudiobasics) called <strong>first_rmarkdown.Rmd</strong>. We know that we left some errors in the creation of variables there, and while it might seem strange to show you errors, it is good exposure for someone new to this to see what errors one might see initially. We are going to see what happens when we click the <strong>Knit HTML</strong> button with these errors. Then we will clean up the code and see what the resulting file looks like from the <strong>Knit</strong>.</p>
+<div class="figure" style="text-align: center"><span id="fig:rmderrors"></span>
+<img src="gifs/rmd_errors.gif" alt="Errors in an R Markdown file"  />
+<p class="caption">
+Figure 4.1: Errors in an R Markdown file
+</p>
 </div>
-<div id="intro" class="section level1">
-<h1><span class="header-section-number">1</span> Introduction</h1>
-<!--
-In the HTML version of this book, you can find different formats for the book by clicking on the save icon <img src="screenshots/save_icon.png" width="14" style="display: block; margin: auto;" /> in the top pane of this book website. HTML is the preferred format but the ePub format is also available.  Since there are animated GIFs included and PDFs don't handle GIFs natively, PDF format is not provided.
--->
-<p>This resource is designed to provide new users to R, RStudio, and RMarkdown with the introductory steps needed to begin their own reproducible research. A review of many of the common R errors encountered (and what they mean in laymen’s terms) is also provided. Many screenshots and GIFs will be included, but if further clarification is needed on these or any other aspect of the book, please create a GitHub issue <a href="https://github.com/ismayc/rbasics/issues">here</a> or email <a href="mailto:chester.ismay@gmail.com">me</a> with a reference to the error/area where more guidance is necessary.</p>
-<p>This book will evolve and be updated as needed based on feedback. Check the date at the beginning of this chapter to see when the book was last updated. In addition, each individual chapter shows the time of last update.</p>
+<p>When you initially created an R Markdown file, a basic template with some code and text was inputted for you. This is to give you a sense of how to create your own R Markdown file with your own R code and your own commentary. We modified some of that code here. I decided to remove all of the lines in the <code>cars</code> named chunk of code even though the errors did not occur in the declaration of the objects that had names stored in them. We see that an HTML file is produced in the <strong>Viewer</strong> pane because <strong>View in Pane</strong> was selected.</p>
+<p>As you look over the <strong>Including Plots</strong> text you may be surprised to see that there is no plot provided in the R Markdown file, but in the HTML file there is a scatter-plot showing temperature and pressure varying. This is something alluded to earlier. R Markdown runs the code stored in R chunks and then places that output into the HTML (or PDF or DOCX, etc.) format.</p>
+<p>You can also see that the text appears as commentary before and after the R code. You’ll understand in a bit why the text “Including Plots” is so much larger than the other text.</p>
+<p><strong>Important note</strong>: Remember that all of the R code you want to run needs to be stored in a chunk (in the right order) for your analysis to be reproducible AND for you not to receive errors when you <strong>Knit</strong>. It is easy to do a lot of work in the R <strong>Console</strong> and then forget to add that work into a chunk in your <strong>Rmd</strong> file. This is probably the number one error you will see when you first begin working in RStudio. An example of this error is below in a GIF file.</p>
+<div class="figure" style="text-align: center"><span id="fig:forgetcode"></span>
+<img src="gifs/forget_copy.gif" alt="Forgetting to copy from Console to R chunk"  />
+<p class="caption">
+Figure 4.2: Forgetting to copy from Console to R chunk
+</p>
+</div>
+<p>The <code>object not found</code> errors are the most frequently encountered errors and along with misspellings and not completing R code segments provide the vast majority of issues with R. You’ll see a further breakdown of this in Chapter <a href="6-errors.html#errors">6</a>.</p>
+</div>
+<div id="the-components-of-an-r-markdown-file" class="section level2">
+<h2><span class="header-section-number">4.2</span> The components of an R Markdown file</h2>
+<p>The top part of the file is called the YAML</p>
+<ul>
+<li>Resource for Markdown: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" class="uri">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a></li>
+<li>R Markdown chunk options</li>
+<li>Help -&gt; Cheatsheets</li>
+</ul>
+<p><strong>Last updated:</strong></p>
+<pre><code>## [1] &quot;By Chester on Sunday, August 14, 2016 18:25:47 PDT&quot;</code></pre>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="2-whyR.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="3-rstudiobasics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="5-rmdanal.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -170,7 +194,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ismayc/rbasics/edit/master/index.Rmd",
+"link": "https://github.com/ismayc/rbasics/edit/master/92-rmarkdown.Rmd",
 "text": null
 },
 "download": null,
