@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-08-14">
+<meta name="date" content="2016-08-15">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -56,6 +56,43 @@ MathJax.Hub.Config({
 
 
 
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -84,7 +121,8 @@ MathJax.Hub.Config({
 </ul></li>
 <li class="chapter" data-level="3.3" data-path="3-rstudiobasics.html"><a href="3-rstudiobasics.html#working-in-rstudio-server"><i class="fa fa-check"></i><b>3.3</b> Working in RStudio Server</a><ul>
 <li class="chapter" data-level="3.3.1" data-path="3-rstudiobasics.html"><a href="3-rstudiobasics.html#logging-in-and-initial-screen"><i class="fa fa-check"></i><b>3.3.1</b> Logging in and initial screen</a></li>
-<li class="chapter" data-level="3.3.2" data-path="3-rstudiobasics.html"><a href="3-rstudiobasics.html#basic-workflow"><i class="fa fa-check"></i><b>3.3.2</b> Basic workflow</a></li>
+<li class="chapter" data-level="3.3.2" data-path="3-rstudiobasics.html"><a href="3-rstudiobasics.html#basic-workflow-with-rstudio"><i class="fa fa-check"></i><b>3.3.2</b> Basic Workflow with RStudio</a></li>
+<li class="chapter" data-level="3.3.3" data-path="3-rstudiobasics.html"><a href="3-rstudiobasics.html#sharing-projects-on-rstudio-server-pro"><i class="fa fa-check"></i><b>3.3.3</b> Sharing Projects on RStudio Server Pro</a></li>
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="3-rstudiobasics.html"><a href="3-rstudiobasics.html#rstudio-layout"><i class="fa fa-check"></i><b>3.4</b> RStudio Layout</a><ul>
 <li class="chapter" data-level="3.4.1" data-path="3-rstudiobasics.html"><a href="3-rstudiobasics.html#code-editor-view-window"><i class="fa fa-check"></i><b>3.4.1</b> Code Editor / View Window</a></li>
@@ -95,10 +133,21 @@ MathJax.Hub.Config({
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html"><i class="fa fa-check"></i><b>4</b> R Markdown</a><ul>
-<li class="chapter" data-level="4.1" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#fixing-errors-in-an-r-markdown-file"><i class="fa fa-check"></i><b>4.1</b> Fixing errors in an R Markdown file</a></li>
-<li class="chapter" data-level="4.2" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#the-components-of-an-r-markdown-file"><i class="fa fa-check"></i><b>4.2</b> The components of an R Markdown file</a></li>
-<li class="chapter" data-level="4.3" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#r-markdown-chunk-options"><i class="fa fa-check"></i><b>4.3</b> R Markdown chunk options</a></li>
-<li class="chapter" data-level="4.4" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#help---cheatsheets"><i class="fa fa-check"></i><b>4.4</b> Help -&gt; Cheatsheets</a></li>
+<li class="chapter" data-level="4.1" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#fixerrors"><i class="fa fa-check"></i><b>4.1</b> Fixing Errors in an R Markdown file</a></li>
+<li class="chapter" data-level="4.2" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#the-components-of-an-r-markdown-file"><i class="fa fa-check"></i><b>4.2</b> The Components of an R Markdown File</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#yaml"><i class="fa fa-check"></i><b>4.2.1</b> YAML</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#headers"><i class="fa fa-check"></i><b>4.2.2</b> Headers</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#emphasis"><i class="fa fa-check"></i><b>4.2.3</b> Emphasis</a></li>
+<li class="chapter" data-level="4.2.4" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#links"><i class="fa fa-check"></i><b>4.2.4</b> Links</a></li>
+<li class="chapter" data-level="4.2.5" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#lists"><i class="fa fa-check"></i><b>4.2.5</b> Lists</a></li>
+<li class="chapter" data-level="4.2.6" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#miscellaneous-markdown"><i class="fa fa-check"></i><b>4.2.6</b> Miscellaneous Markdown</a></li>
+<li class="chapter" data-level="4.2.7" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#r-chunks"><i class="fa fa-check"></i><b>4.2.7</b> R Chunks</a></li>
+<li class="chapter" data-level="4.2.8" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#inline-r-code"><i class="fa fa-check"></i><b>4.2.8</b> Inline R code</a></li>
+<li class="chapter" data-level="4.2.9" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#code-highlighting"><i class="fa fa-check"></i><b>4.2.9</b> Code Highlighting</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#r-markdown-chunk-options"><i class="fa fa-check"></i><b>4.3</b> R Markdown Chunk Options</a></li>
+<li class="chapter" data-level="4.4" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#general-guidelines-for-writing-r-markdown-files"><i class="fa fa-check"></i><b>4.4</b> General Guidelines for Writing R Markdown Files</a></li>
+<li class="chapter" data-level="4.5" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#help---cheatsheets"><i class="fa fa-check"></i><b>4.5</b> Help -&gt; Cheatsheets</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-rmdanal.html"><a href="5-rmdanal.html"><i class="fa fa-check"></i><b>5</b> Introductory R Analysis using R Markdown</a><ul>
 <li class="chapter" data-level="5.1" data-path="5-rmdanal.html"><a href="5-rmdanal.html#a-beginning-workflow"><i class="fa fa-check"></i><b>5.1</b> A beginning workflow</a></li>
@@ -141,22 +190,28 @@ MathJax.Hub.Config({
 </div>
 <div id="using-r-with-periodic-table-dataset" class="section level2">
 <h2><span class="header-section-number">5.2</span> Using R with periodic table dataset</h2>
+<ul>
+<li>The <code>library</code> function</li>
+</ul>
 </div>
 <div id="mean-median-standard-deviation-five-number-summary-distribution" class="section level2">
 <h2><span class="header-section-number">5.3</span> Mean, median, standard deviation, five-number summary, distribution</h2>
 </div>
 <div id="additional-content-to-cover" class="section level2">
 <h2><span class="header-section-number">5.4</span> Additional content to cover</h2>
-<pre><code>+ data structures (vectors, lists, data frames, matrices)
-+ indexing/subsetting
-+ functions (default arguments)
-+ Case matters in R!
-+ Why do some arguments require quotations and others don&#39;t?</code></pre>
+<ul>
+<li>data structures (vectors, lists, data frames, matrices)</li>
+<li>Vectorized operations</li>
+<li>indexing/subsetting</li>
+<li>functions (default arguments)</li>
+<li>Case matters in R!</li>
+<li>Why do some arguments require quotations and others don’t?</li>
+</ul>
 </div>
 <div id="r-markdown-templates" class="section level2">
 <h2><span class="header-section-number">5.5</span> R Markdown templates</h2>
 <p><strong>Last updated:</strong></p>
-<pre><code>## [1] &quot;By Chester on Sunday, August 14, 2016 18:41:42 PDT&quot;</code></pre>
+<pre><code>## [1] &quot;By Chester on Monday, August 15, 2016 12:34:35 PDT&quot;</code></pre>
 
 </div>
 </div>
@@ -198,7 +253,8 @@ gitbook.start({
 },
 "download": null,
 "toc": {
-"collapse": "subsection"
+"collapse": "section",
+"scroll_highlight": true
 }
 });
 });
