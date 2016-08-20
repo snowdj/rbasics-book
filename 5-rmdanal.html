@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-08-15">
+<meta name="date" content="2016-08-20">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -150,11 +150,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.5" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#help---cheatsheets"><i class="fa fa-check"></i><b>4.5</b> Help -&gt; Cheatsheets</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-rmdanal.html"><a href="5-rmdanal.html"><i class="fa fa-check"></i><b>5</b> R Analysis using R Markdown</a><ul>
-<li class="chapter" data-level="5.1" data-path="5-rmdanal.html"><a href="5-rmdanal.html#a-beginning-workflow"><i class="fa fa-check"></i><b>5.1</b> A beginning workflow</a></li>
-<li class="chapter" data-level="5.2" data-path="5-rmdanal.html"><a href="5-rmdanal.html#using-r-with-periodic-table-dataset"><i class="fa fa-check"></i><b>5.2</b> Using R with periodic table dataset</a></li>
-<li class="chapter" data-level="5.3" data-path="5-rmdanal.html"><a href="5-rmdanal.html#mean-median-standard-deviation-five-number-summary-distribution"><i class="fa fa-check"></i><b>5.3</b> Mean, median, standard deviation, five-number summary, distribution</a></li>
-<li class="chapter" data-level="5.4" data-path="5-rmdanal.html"><a href="5-rmdanal.html#additional-content-to-cover"><i class="fa fa-check"></i><b>5.4</b> Additional content to cover</a></li>
-<li class="chapter" data-level="5.5" data-path="5-rmdanal.html"><a href="5-rmdanal.html#r-markdown-templates"><i class="fa fa-check"></i><b>5.5</b> R Markdown templates</a></li>
+<li class="chapter" data-level="5.1" data-path="5-rmdanal.html"><a href="5-rmdanal.html#a-beginning-directoryfile-workflow"><i class="fa fa-check"></i><b>5.1</b> A beginning directory/file workflow</a></li>
+<li class="chapter" data-level="5.2" data-path="5-rmdanal.html"><a href="5-rmdanal.html#using-r-with-periodic-table-dataset"><i class="fa fa-check"></i><b>5.2</b> Using R with periodic table dataset</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="5-rmdanal.html"><a href="5-rmdanal.html#loading-data-from-a-file"><i class="fa fa-check"></i><b>5.2.1</b> Loading data from a file</a></li>
+<li class="chapter" data-level="5.2.2" data-path="5-rmdanal.html"><a href="5-rmdanal.html#loading-data-from-an-r-package"><i class="fa fa-check"></i><b>5.2.2</b> Loading data from an R package</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="5-rmdanal.html"><a href="5-rmdanal.html#datastructures"><i class="fa fa-check"></i><b>5.3</b> Data Structures</a></li>
+<li class="chapter" data-level="5.4" data-path="5-rmdanal.html"><a href="5-rmdanal.html#vectorized-operations"><i class="fa fa-check"></i><b>5.4</b> Vectorized operations</a></li>
+<li class="chapter" data-level="5.5" data-path="5-rmdanal.html"><a href="5-rmdanal.html#indexing-and-subsetting"><i class="fa fa-check"></i><b>5.5</b> Indexing and Subsetting</a></li>
+<li class="chapter" data-level="5.6" data-path="5-rmdanal.html"><a href="5-rmdanal.html#functions"><i class="fa fa-check"></i><b>5.6</b> Functions</a></li>
+<li class="chapter" data-level="5.7" data-path="5-rmdanal.html"><a href="5-rmdanal.html#mean-median-standard-deviation-five-number-summary-distribution"><i class="fa fa-check"></i><b>5.7</b> Mean, median, standard deviation, five-number summary, distribution</a></li>
+<li class="chapter" data-level="5.8" data-path="5-rmdanal.html"><a href="5-rmdanal.html#r-markdown-templates"><i class="fa fa-check"></i><b>5.8</b> R Markdown templates</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="6-errors.html"><a href="6-errors.html"><i class="fa fa-check"></i><b>6</b> Deciphering Common R Errors</a></li>
 <li class="chapter" data-level="7" data-path="7-references.html"><a href="7-references.html"><i class="fa fa-check"></i><b>7</b> References</a></li>
@@ -183,36 +189,83 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="rmdanal" class="section level1">
 <h1><span class="header-section-number">5</span> R Analysis using R Markdown</h1>
 <p>In this chapter, you’ll see many of the ways that R stores objects and more details on how you can use functions to solve problems in R. You’ll be working with a common dataset derived from something that you likely have encountered before: the periodic table from chemistry.</p>
-<div id="a-beginning-workflow" class="section level2">
-<h2><span class="header-section-number">5.1</span> A beginning workflow</h2>
-<ul>
-<li>“File organization and naming are powerful weapons against chaos.” - Jenny Bryan</li>
-</ul>
+<div id="a-beginning-directoryfile-workflow" class="section level2">
+<h2><span class="header-section-number">5.1</span> A beginning directory/file workflow</h2>
+<blockquote>
+<p>“File organization and naming are powerful weapons against chaos.” - Jenny Bryan</p>
+</blockquote>
+<p>Something that is not frequently discussed when working with files and programming languages like R is the importance of naming your files something relevantly and having organization of your files in folders. You may be tempted to call a file <code>analysis.Rmd</code> but what happens when you need to change your analysis months from now and you’ve named many files for many different projects <code>analysis.Rmd</code> in many different folders. It’s much better to give your future self a break and commit to concise naming strategies.</p>
+<p>You can choose a variety of ways to name files. These guidelines are what I try to follow:</p>
+<ol style="list-style-type: decimal">
+<li><p>Group similar style files into the same folder whenever possible.</p>
+<p>Try not to have one folder that contains all of the different types of files you are working with. It is much easier to find what you are looking for if you put all of your <code>data</code> files in a <code>data</code> folder, all of your <code>figure</code> files in a <code>figure</code> folder, and so on.</p>
+<p>This rule can be broken if you only have one or two of each type. It can be the case that too many folders can waste your time when a useful search for the appropriate file may be able to find your find faster than digging through a complex hierarchy of directories.</p></li>
+<li><p>Name your files consistently so that what the file contains can be easily identified from the name of your file, but be concise.</p>
+<p>Seeing <code>test1.Rmd</code> and <code>test2.Rmd</code> doesn’t tell us much about what is actually in the files. It’s OK to create a temporary file or two if you don’t think you will be using it going forward, but you should be in the habit of reviewing your work at the end of your session and naming files that we needed appropriately. Something like <code>model_fit_sodium.Rmd</code> is so much better in the long-run. Remember to think about your future self whenever you can, especially with programming. Be nice to yourself so that future self really appreciates past self.</p></li>
+<li><p>Use an underscore to separate elements of the file name.</p>
+<p>The underscore <code>_</code> produces a visually appealing way for us to realize there is a separation between content. You may be tempted to just use a space, but spaces cause problems in R and in other programming languages. Some folks prefer to just change the case of the first letter of the word to bring attention. Here are a few examples of file names. You can be the judge as to what is most appealing to you:</p>
+<p><code>barplot_weight_height.Rmd</code> vs <code>barplotWeightHeight.Rmd</code> vs (the worst) <code>barplotweightheight.Rmd</code></p>
+<p>Whatever you choose for style, be consistent and think about other users as you name your files. If you were passed a smorgasbord of files that is a mess to deal with and hard to understand, you wouldn’t like it, right? Don’t be that person to someone else (or yourself)!</p></li>
+</ol>
 </div>
 <div id="using-r-with-periodic-table-dataset" class="section level2">
 <h2><span class="header-section-number">5.2</span> Using R with periodic table dataset</h2>
+<p>We now hop into the basics of working with a dataset in R. We will also explore the ways R stores data in <strong>objects</strong>, how to access specific elements in those objects, and also how to use <strong>functions</strong>, which are one of the most useful pieces of R to help with organization and clean code.</p>
+<div id="loading-data-from-a-file" class="section level3">
+<h3><span class="header-section-number">5.2.1</span> Loading data from a file</h3>
+<p>One of the most common ways you’ll want to work with data is by importing it from a file. A common file format that works nicely with R is the CSV (comma-seperated values) file. The following R commands first download the CSV file from the internet on my webpage into the <code>periodic-table-data.csv</code> file on your computer, then reads in the CSV stored, and then gives the name <code>periodic_table</code> to the data frame that stores these values in R:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">download.file</span>(<span class="dt">url =</span> <span class="st">&quot;http://ismayc.github.io/periodic-table-data.csv&quot;</span>, 
+  <span class="dt">destfile =</span> <span class="st">&quot;periodic-table-data.csv&quot;</span>)
+periodic_table &lt;-<span class="st"> </span><span class="kw">read.csv</span>(<span class="st">&quot;periodic-table-data.csv&quot;</span>, 
+  <span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<p>We will be discussing both <strong>strings</strong> and <strong>factors</strong> in the data structures section (Section <a href="5-rmdanal.html#datastructures">5.3</a>) and why this additional parameter <code>stringsAsFactors</code> set to <code>FALSE</code> is recommended.</p>
+<p>It’s good practice to check out the data after you have loaded it in:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">View</span>(periodic_table)</code></pre></div>
+</div>
+<div id="loading-data-from-an-r-package" class="section level3">
+<h3><span class="header-section-number">5.2.2</span> Loading data from an R package</h3>
+<p>This dataset about the periodic table is also loaded into an R package I created called <code>chemistr</code>. Currently, this package exists on GitHub instead of CRAN (<a href="https://cran.r-project.org/">the Comprehensive R Archive Network</a>) so instead of just running <code>install.packages(&quot;chemistr&quot;)</code>, you’ll need to install another package first that contains the function we need to install an R package from GitHub. We’ll first download the <code>devtools</code> package from a CRAN repository hosted by RStudio and install it:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>, <span class="dt">repos =</span> <span class="st">&quot;http://cran.rstudio.org&quot;</span>)</code></pre></div>
+<p>Next we will download and install the <code>chemistr</code> package from my GitHub account using the <code>install_github</code> function in the <code>devtools</code> package. (This is where the <code>::</code> come in.)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools::<span class="kw">install_github</span>(<span class="st">&quot;ismayc/chemistr&quot;</span>)</code></pre></div>
+<p>We could have also loaded all of the <code>devtools</code> package in and then ran <code>install_github</code> without needing the <code>::</code>. This is a common error in failing to load in a package first and then asking R to run a function inside that package. R will complain about not knowing where to find it and this is most commonly remedied by ensuring the <code>library</code> function is run before calling the function. We can see this error below in the GIF:</p>
+<p>Lastly, we can load the data set into R by using the <code>data</code> function:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">data</span>(periodic_table, <span class="dt">package =</span> <span class="st">&quot;chemistr&quot;</span>)</code></pre></div>
+<p>As before after reading in the CSV, we can quickly view the data frame in spreadsheet-like form:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">View</span>(periodic_table)</code></pre></div>
+</div>
+</div>
+<div id="datastructures" class="section level2">
+<h2><span class="header-section-number">5.3</span> Data Structures</h2>
 <ul>
-<li>The <code>library</code> function</li>
+<li>vectors</li>
+<li>lists</li>
+<li>data frames</li>
+<li>matrices</li>
+<li>factors</li>
+</ul>
+</div>
+<div id="vectorized-operations" class="section level2">
+<h2><span class="header-section-number">5.4</span> Vectorized operations</h2>
+</div>
+<div id="indexing-and-subsetting" class="section level2">
+<h2><span class="header-section-number">5.5</span> Indexing and Subsetting</h2>
+</div>
+<div id="functions" class="section level2">
+<h2><span class="header-section-number">5.6</span> Functions</h2>
+<ul>
+<li>default arguments)</li>
 </ul>
 </div>
 <div id="mean-median-standard-deviation-five-number-summary-distribution" class="section level2">
-<h2><span class="header-section-number">5.3</span> Mean, median, standard deviation, five-number summary, distribution</h2>
-</div>
-<div id="additional-content-to-cover" class="section level2">
-<h2><span class="header-section-number">5.4</span> Additional content to cover</h2>
+<h2><span class="header-section-number">5.7</span> Mean, median, standard deviation, five-number summary, distribution</h2>
 <ul>
-<li>data structures (vectors, lists, data frames, matrices)</li>
-<li>Vectorized operations</li>
-<li>indexing/subsetting</li>
-<li>functions (default arguments)</li>
 <li>Case matters in R!</li>
 <li>Why do some arguments require quotations and others don’t?</li>
 </ul>
 </div>
 <div id="r-markdown-templates" class="section level2">
-<h2><span class="header-section-number">5.5</span> R Markdown templates</h2>
-<p><strong>Last updated:</strong></p>
-<pre><code>## [1] &quot;By Chester on Monday, August 15, 2016 17:03:21 PDT&quot;</code></pre>
+<h2><span class="header-section-number">5.8</span> R Markdown templates</h2>
 
 </div>
 </div>
