@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-08-20">
+<meta name="date" content="2016-08-21">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -148,6 +148,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#r-markdown-chunk-options"><i class="fa fa-check"></i><b>4.3</b> R Markdown Chunk Options</a></li>
 <li class="chapter" data-level="4.4" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#general-guidelines-for-writing-r-markdown-files"><i class="fa fa-check"></i><b>4.4</b> General Guidelines for Writing R Markdown Files</a></li>
 <li class="chapter" data-level="4.5" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#help---cheatsheets"><i class="fa fa-check"></i><b>4.5</b> Help -&gt; Cheatsheets</a></li>
+<li class="chapter" data-level="4.6" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#spell-check"><i class="fa fa-check"></i><b>4.6</b> Spell-check</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-rmdanal.html"><a href="5-rmdanal.html"><i class="fa fa-check"></i><b>5</b> Intro to R using R Markdown</a><ul>
 <li class="chapter" data-level="5.1" data-path="5-rmdanal.html"><a href="5-rmdanal.html#a-beginning-directoryfile-workflow"><i class="fa fa-check"></i><b>5.1</b> A beginning directory/file workflow</a></li>
@@ -160,14 +161,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3.3" data-path="5-rmdanal.html"><a href="5-rmdanal.html#factors"><i class="fa fa-check"></i><b>5.3.3</b> Factors</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="5-rmdanal.html"><a href="5-rmdanal.html#vectorized-operations"><i class="fa fa-check"></i><b>5.4</b> Vectorized operations</a></li>
-<li class="chapter" data-level="5.5" data-path="5-rmdanal.html"><a href="5-rmdanal.html#index-sub"><i class="fa fa-check"></i><b>5.5</b> Indexing and subsetting</a></li>
+<li class="chapter" data-level="5.5" data-path="5-rmdanal.html"><a href="5-rmdanal.html#index-sub"><i class="fa fa-check"></i><b>5.5</b> Indexing and subsetting</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="5-rmdanal.html"><a href="5-rmdanal.html#using-with-a-vectorvariable"><i class="fa fa-check"></i><b>5.5.1</b> Using <code>[ ]</code> with a vector/variable</a></li>
+<li class="chapter" data-level="5.5.2" data-path="5-rmdanal.html"><a href="5-rmdanal.html#using-with-a-data-frame"><i class="fa fa-check"></i><b>5.5.2</b> Using <code>[ , ]</code> with a data frame</a></li>
+<li class="chapter" data-level="5.5.3" data-path="5-rmdanal.html"><a href="5-rmdanal.html#using-logicals"><i class="fa fa-check"></i><b>5.5.3</b> Using logicals</a></li>
+</ul></li>
 <li class="chapter" data-level="5.6" data-path="5-rmdanal.html"><a href="5-rmdanal.html#functions"><i class="fa fa-check"></i><b>5.6</b> Functions</a></li>
+<li class="chapter" data-level="5.7" data-path="5-rmdanal.html"><a href="5-rmdanal.html#closing-thoughts"><i class="fa fa-check"></i><b>5.7</b> Closing thoughts</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="6-errors.html"><a href="6-errors.html"><i class="fa fa-check"></i><b>6</b> Deciphering Common R Errors</a><ul>
 <li class="chapter" data-level="6.1" data-path="6-errors.html"><a href="6-errors.html#error-could-not-find-function"><i class="fa fa-check"></i><b>6.1</b> <code>Error: could not find function</code></a></li>
-<li class="chapter" data-level="6.2" data-path="6-errors.html"><a href="6-errors.html#error-object-find-function"><i class="fa fa-check"></i><b>6.2</b> <code>Error: object find function</code></a></li>
+<li class="chapter" data-level="6.2" data-path="6-errors.html"><a href="6-errors.html#error-object-not-found"><i class="fa fa-check"></i><b>6.2</b> <code>Error: object not found</code></a></li>
 <li class="chapter" data-level="6.3" data-path="6-errors.html"><a href="6-errors.html#misspellings"><i class="fa fa-check"></i><b>6.3</b> Misspellings</a></li>
-<li class="chapter" data-level="6.4" data-path="6-errors.html"><a href="6-errors.html#unmatched-paranthesis"><i class="fa fa-check"></i><b>6.4</b> Unmatched paranthesis</a></li>
+<li class="chapter" data-level="6.4" data-path="6-errors.html"><a href="6-errors.html#unmatched-parenthesis"><i class="fa fa-check"></i><b>6.4</b> Unmatched parenthesis</a></li>
 <li class="chapter" data-level="6.5" data-path="6-errors.html"><a href="6-errors.html#general-guidelines"><i class="fa fa-check"></i><b>6.5</b> General guidelines</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="7-conclusion.html"><a href="7-conclusion.html"><i class="fa fa-check"></i><b>7</b> Concluding Remarks</a></li>
@@ -197,18 +203,16 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">Getting used to R, RStudio, and R Markdown</h1>
 <h4 class="author"><em>Chester Ismay</em></h4>
-<h4 class="date"><em>2016-08-20</em></h4>
+<h4 class="date"><em>2016-08-21</em></h4>
 </div>
 <div id="intro" class="section level1">
 <h1><span class="header-section-number">1</span> Introduction</h1>
-<!--
-In the HTML version of this book, you can find different formats for the book by clicking on the save icon <img src="screenshots/save_icon.png" width="14" style="display: block; margin: auto;" /> in the top pane of this book website. HTML is the preferred format but the ePub format is also available.  Since there are animated GIFs included and PDFs don't handle GIFs natively, PDF format is not provided.
--->
-<p>This resource is designed to provide new users to R, RStudio, and R Markdown with the introductory steps needed to begin their own reproducible research. A review of many of the common R errors encountered (and what they mean in laymen’s terms) will also provided be provided. (These will be updated over the next academic year.) Many screenshots and GIFs will be included, but if further clarification is needed on these or any other aspect of the book, please create a GitHub issue <a href="https://github.com/ismayc/rbasics/issues">here</a> or email <a href="mailto:chester.ismay@gmail.com">me</a> with a reference to the error/area where more guidance is necessary. Pull requests on GitHub for typos or improvements are also welcome and you can easily do so by clicking on the Edit button near Search at the top of this page.</p>
+<p>In the HTML version of this book, you can alo download the PDF version of the book by clicking on PDF button in the top toolbar of the page. HTML is the preferred format but the PDF format may be preferred for some readers. Links to the different GIFs directly found in the HTML version are provided in the PDF version.</p>
+<p>This resource is designed to provide new users to R, RStudio, and R Markdown with the introductory steps needed to begin their own reproducible research. A review of many of the common R errors encountered (and what they mean in layman’s terms) will also provided be provided. (These will be updated over the next academic year.) Many screenshots and GIFs will be included, but if further clarification is needed on these or any other aspect of the book, please create a GitHub issue <a href="https://github.com/ismayc/rbasics/issues">here</a> or email <a href="mailto:chester.ismay@gmail.com">me</a> with a reference to the error/area where more guidance is necessary. Pull requests on GitHub for typos or improvements are also welcome and you can easily do so by clicking on the Edit button near Search at the top of the HTML version of the book.</p>
 <p>This book will evolve and be updated as needed based on feedback. You can always check the date below to see when the book was last updated.</p>
 <p>It is recommended that you have R version 3.3.0 or later, RStudio Desktop version 0.99 or higher, and <code>rmarkdown</code> R package version 1.0 or higher. This is to make sure that the screenshots and GIF recordings match up with the behavior on your machine/set-up.</p>
 <p><strong>Book was last updated:</strong></p>
-<pre><code>## [1] &quot;By Chester on Saturday, August 20, 2016 19:06:34 PDT&quot;</code></pre>
+<pre><code>## [1] &quot;By Chester on Sunday, August 21, 2016 14:28:26 PDT&quot;</code></pre>
 
 </div>
             </section>
@@ -247,7 +251,7 @@ gitbook.start({
 "link": "https://github.com/ismayc/rbasics/edit/master/index.Rmd",
 "text": null
 },
-"download": null,
+"download": ["rbasics.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true

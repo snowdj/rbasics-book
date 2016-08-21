@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-08-20">
+<meta name="date" content="2016-08-21">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -148,6 +148,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="4.3" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#r-markdown-chunk-options"><i class="fa fa-check"></i><b>4.3</b> R Markdown Chunk Options</a></li>
 <li class="chapter" data-level="4.4" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#general-guidelines-for-writing-r-markdown-files"><i class="fa fa-check"></i><b>4.4</b> General Guidelines for Writing R Markdown Files</a></li>
 <li class="chapter" data-level="4.5" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#help---cheatsheets"><i class="fa fa-check"></i><b>4.5</b> Help -&gt; Cheatsheets</a></li>
+<li class="chapter" data-level="4.6" data-path="4-rmarkdown.html"><a href="4-rmarkdown.html#spell-check"><i class="fa fa-check"></i><b>4.6</b> Spell-check</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="5-rmdanal.html"><a href="5-rmdanal.html"><i class="fa fa-check"></i><b>5</b> Intro to R using R Markdown</a><ul>
 <li class="chapter" data-level="5.1" data-path="5-rmdanal.html"><a href="5-rmdanal.html#a-beginning-directoryfile-workflow"><i class="fa fa-check"></i><b>5.1</b> A beginning directory/file workflow</a></li>
@@ -160,14 +161,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="5.3.3" data-path="5-rmdanal.html"><a href="5-rmdanal.html#factors"><i class="fa fa-check"></i><b>5.3.3</b> Factors</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="5-rmdanal.html"><a href="5-rmdanal.html#vectorized-operations"><i class="fa fa-check"></i><b>5.4</b> Vectorized operations</a></li>
-<li class="chapter" data-level="5.5" data-path="5-rmdanal.html"><a href="5-rmdanal.html#index-sub"><i class="fa fa-check"></i><b>5.5</b> Indexing and subsetting</a></li>
+<li class="chapter" data-level="5.5" data-path="5-rmdanal.html"><a href="5-rmdanal.html#index-sub"><i class="fa fa-check"></i><b>5.5</b> Indexing and subsetting</a><ul>
+<li class="chapter" data-level="5.5.1" data-path="5-rmdanal.html"><a href="5-rmdanal.html#using-with-a-vectorvariable"><i class="fa fa-check"></i><b>5.5.1</b> Using <code>[ ]</code> with a vector/variable</a></li>
+<li class="chapter" data-level="5.5.2" data-path="5-rmdanal.html"><a href="5-rmdanal.html#using-with-a-data-frame"><i class="fa fa-check"></i><b>5.5.2</b> Using <code>[ , ]</code> with a data frame</a></li>
+<li class="chapter" data-level="5.5.3" data-path="5-rmdanal.html"><a href="5-rmdanal.html#using-logicals"><i class="fa fa-check"></i><b>5.5.3</b> Using logicals</a></li>
+</ul></li>
 <li class="chapter" data-level="5.6" data-path="5-rmdanal.html"><a href="5-rmdanal.html#functions"><i class="fa fa-check"></i><b>5.6</b> Functions</a></li>
+<li class="chapter" data-level="5.7" data-path="5-rmdanal.html"><a href="5-rmdanal.html#closing-thoughts"><i class="fa fa-check"></i><b>5.7</b> Closing thoughts</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="6-errors.html"><a href="6-errors.html"><i class="fa fa-check"></i><b>6</b> Deciphering Common R Errors</a><ul>
 <li class="chapter" data-level="6.1" data-path="6-errors.html"><a href="6-errors.html#error-could-not-find-function"><i class="fa fa-check"></i><b>6.1</b> <code>Error: could not find function</code></a></li>
-<li class="chapter" data-level="6.2" data-path="6-errors.html"><a href="6-errors.html#error-object-find-function"><i class="fa fa-check"></i><b>6.2</b> <code>Error: object find function</code></a></li>
+<li class="chapter" data-level="6.2" data-path="6-errors.html"><a href="6-errors.html#error-object-not-found"><i class="fa fa-check"></i><b>6.2</b> <code>Error: object not found</code></a></li>
 <li class="chapter" data-level="6.3" data-path="6-errors.html"><a href="6-errors.html#misspellings"><i class="fa fa-check"></i><b>6.3</b> Misspellings</a></li>
-<li class="chapter" data-level="6.4" data-path="6-errors.html"><a href="6-errors.html#unmatched-paranthesis"><i class="fa fa-check"></i><b>6.4</b> Unmatched paranthesis</a></li>
+<li class="chapter" data-level="6.4" data-path="6-errors.html"><a href="6-errors.html#unmatched-parenthesis"><i class="fa fa-check"></i><b>6.4</b> Unmatched parenthesis</a></li>
 <li class="chapter" data-level="6.5" data-path="6-errors.html"><a href="6-errors.html#general-guidelines"><i class="fa fa-check"></i><b>6.5</b> General guidelines</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="7-conclusion.html"><a href="7-conclusion.html"><i class="fa fa-check"></i><b>7</b> Concluding Remarks</a></li>
@@ -196,13 +202,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
             <section class="normal" id="section-">
 <div id="rmarkdown" class="section level1">
 <h1><span class="header-section-number">4</span> R Markdown</h1>
-<p>R Markdown provides an easy way to produce a rich, fully-documented reproducible analysis. It allows its user to share a single file that contains all of the commentary, R code, and metadata needed to reproduce the analysis from beginning to end. R Markdown allows for chunks of R code to be included along with Markdown text to produce a nicely formatted HTML, PDF, or Word file without having to know any HTML or <span class="math inline">\(\LaTeX\)</span> code or have to fuss with getting the formatting just right in a Microsoft Word DOCX file.</p>
+<p>R Markdown provides an easy way to produce a rich, fully-documented reproducible analysis. It allows its user to share a single file that contains all of the commentary, R code, and metadata needed to reproduce the analysis from beginning to end. R Markdown allows for chunks of R code to be included along with Markdown text to produce a nicely formatted HTML, PDF, or Word file without having to know any HTML or LaTeX code or have to fuss with getting the formatting just right in a Microsoft Word DOCX file.</p>
 <p>One R Markdown file can generate a variety of different formats and all of this is done in a single text file with a few bits of formatting. I think you’ll be pleasantly surprised at how easy it is to write an R Markdown document after your first few encounters.</p>
 <div id="fixerrors" class="section level2">
 <h2><span class="header-section-number">4.1</span> Fixing Errors in an R Markdown file</h2>
-<p>We now shift back to the R Markdown file created in Chapter <a href="3-rstudiobasics.html#rstudiobasics">3</a> called <strong>first_rmarkdown.Rmd</strong>. We know that we left some errors in the creation of variables there, and while it might seem strange to show you errors, it is good exposure for someone new to this to see what errors one might see initially. We are going to see what happens when we click the <strong>Knit HTML</strong> button with these errors. Then we will clean up the code and see what the resulting file looks like from the <strong>Knit</strong>.</p>
+<p>We now shift back to the R Markdown file called <strong>first_rmarkdown.Rmd</strong> created in Chapter <a href="3-rstudiobasics.html#rstudiobasics">3</a>. We know that we left some errors in the creation of variables there, and while it might seem strange to show you errors, it is good exposure for someone new to this to see what errors one might see initially. We are going to see what happens when we click the <strong>Knit HTML</strong> button with these errors. Then we will clean up the code and see what the resulting file looks like from the <strong>Knit</strong>.</p>
 <div class="figure" style="text-align: center"><span id="fig:rmderrors"></span>
-<img src="gifs/rmd_errors.gif" alt="Errors in an R Markdown file"  />
+<img src="gifs/rmd_errors.gif" alt="Errors in an R Markdown file" width="\textwidth" />
 <p class="caption">
 Figure 4.1: Errors in an R Markdown file
 </p>
@@ -212,7 +218,7 @@ Figure 4.1: Errors in an R Markdown file
 <p>You can also see that the text appears as commentary before and after the R code. You’ll understand in a bit why the text “Including Plots” is so much larger than the other text.</p>
 <p><strong>Important note</strong>: Remember that all of the R code you want to run needs to be stored in a chunk (in the right order) for your analysis to be reproducible AND for you not to receive errors when you <strong>Knit</strong>. It is easy to do a lot of work in the R <strong>Console</strong> and then forget to add that work into a chunk in your <strong>Rmd</strong> file. This is probably the number one error you will see when you first begin working in RStudio. An example of this error is below in a GIF file.</p>
 <div class="figure" style="text-align: center"><span id="fig:forgetcode"></span>
-<img src="gifs/forget_copy.gif" alt="Forgetting to copy from Console to R chunk"  />
+<img src="gifs/forget_copy.gif" alt="Forgetting to copy from Console to R chunk" width="\textwidth" />
 <p class="caption">
 Figure 4.2: Forgetting to copy from Console to R chunk
 </p>
@@ -238,7 +244,7 @@ Figure 4.2: Forgetting to copy from Console to R chunk
 <div id="headers" class="section level3">
 <h3><span class="header-section-number">4.2.2</span> Headers</h3>
 <div class="figure" style="text-align: center"><span id="fig:headers"></span>
-<img src="gifs/headers.gif" alt="Headers start with hashtags"  />
+<img src="gifs/headers.gif" alt="Headers start with hashtags" width="\textwidth" />
 <p class="caption">
 Figure 4.3: Headers start with hashtags
 </p>
@@ -250,7 +256,7 @@ Figure 4.3: Headers start with hashtags
 <p>Whenever you see a hash-tag in the text of your R Markdown document, you now know that this will correspond to bolded larger text<a href="#fn2" class="footnoteRef" id="fnref2"><sup>2</sup></a> that denotes the start of a section of your document.</p>
 <p>This is one of the nice features of R Markdown. You can simply look at the plain text and know what it will produce in the knitted document. We can also add different styles of emphasis to words, phrases, or sentences by surrounding them in matching symbols. Below are some examples.</p>
 <div class="figure" style="text-align: center"><span id="fig:emphasis"></span>
-<img src="gifs/emphasis.gif" alt="Different emphasis styles in Markdown"  />
+<img src="gifs/emphasis.gif" alt="Different emphasis styles in Markdown" width="\textwidth" />
 <p class="caption">
 Figure 4.4: Different emphasis styles in Markdown
 </p>
@@ -261,7 +267,7 @@ Figure 4.4: Different emphasis styles in Markdown
 <h3><span class="header-section-number">4.2.4</span> Links</h3>
 <p>To add a link to a URL, you simply enclose the text you’d like displayed in the resulting HTML file inside <code>[ ]</code> and then the link itself inside <code>( )</code> right next to each other with no space in between.</p>
 <div class="figure" style="text-align: center"><span id="fig:links"></span>
-<img src="gifs/links.gif" alt="Links to webpages"  />
+<img src="gifs/links.gif" alt="Links to webpages" width="\textwidth" />
 <p class="caption">
 Figure 4.5: Links to webpages
 </p>
@@ -271,7 +277,7 @@ Figure 4.5: Links to webpages
 <h3><span class="header-section-number">4.2.5</span> Lists</h3>
 <p>The GIF below shows the process of creating both ordered and unordered lists.</p>
 <div class="figure" style="text-align: center"><span id="fig:lists"></span>
-<img src="gifs/lists.gif" alt="Links to webpages"  />
+<img src="gifs/lists.gif" alt="Links to webpages" width="\textwidth" />
 <p class="caption">
 Figure 4.6: Links to webpages
 </p>
@@ -360,9 +366,9 @@ I'd like to save this text for later and don't want to delete it yet.
 <li>The lines wrapped inside the beginning and closing three backticks is R code that you could run in the R Console.</li>
 </ul>
 <p>Note that spaces in front of these backticks will produce</p>
-<p>Let’s explore an example of recognizing and creating our own R chunks in our <strong>first_rmarkdown.Rmd</strong> file:</p>
+<p>In our <strong>first_rmarkdown.Rmd</strong> file, let’s explore an example of recognizing and creating our own R chunks:</p>
 <div class="figure" style="text-align: center"><span id="fig:rchunks"></span>
-<img src="gifs/rchunks.gif" alt="Creating and identifying R chunks"  />
+<img src="gifs/rchunks.gif" alt="Creating and identifying R chunks" width="\textwidth" />
 <p class="caption">
 Figure 4.7: Creating and identifying R chunks
 </p>
@@ -374,14 +380,14 @@ Figure 4.7: Creating and identifying R chunks
 <h3><span class="header-section-number">4.2.8</span> Inline R code</h3>
 <p>We’ve seen that we can add R code and have that run in an R chunk of code enclosed by three backticks. We may want to do a simple calculation on the fly inside of the text of our document though.</p>
 <div class="figure" style="text-align: center"><span id="fig:inliner"></span>
-<img src="gifs/inliner.gif" alt="R code running in the text"  />
+<img src="gifs/inliner.gif" alt="R code running in the text" width="\textwidth" />
 <p class="caption">
 Figure 4.8: R code running in the text
 </p>
 </div>
 <p>Another crafty approach is to have the text produced in our document to automatically update based on the results of R code. To see an example of this, we will select a number at random from our <code>count20</code> vector. If it is greater than or equal to 10, we will say so. If it isn’t, we will say so.</p>
 <div class="figure" style="text-align: center"><span id="fig:inliner2"></span>
-<img src="gifs/inliner2.gif" alt="Update text corresponding to R value"  />
+<img src="gifs/inliner2.gif" alt="Update text corresponding to R value" width="\textwidth" />
 <p class="caption">
 Figure 4.9: Update text corresponding to R value
 </p>
@@ -402,14 +408,14 @@ Figure 4.9: Update text corresponding to R value
 <li><p><code>include</code> specifies whether the code AND its output should be included in the resulting knitted document. If it is set to <code>FALSE</code> the code is run but no remnant of the code or its output will be in the resulting document.</p></li>
 </ul>
 <div class="figure" style="text-align: center"><span id="fig:chunkops"></span>
-<img src="gifs/chunkops.gif" alt="Common R chunk options"  />
+<img src="gifs/chunkops.gif" alt="Common R chunk options" width="\textwidth" />
 <p class="caption">
 Figure 4.10: Common R chunk options
 </p>
 </div>
 <p>Since we specified that <code>eval=FALSE</code> and that was where we declared the <code>one_value</code> variable we now obtain an error. You can also include multiple chunk options by separating them by a comma.</p>
 <div class="figure" style="text-align: center"><span id="fig:chunkops2"></span>
-<img src="gifs/chunkops2.gif" alt="Common R chunk options - Part 2"  />
+<img src="gifs/chunkops2.gif" alt="Common R chunk options - Part 2" width="\textwidth" />
 <p class="caption">
 Figure 4.11: Common R chunk options - Part 2
 </p>
@@ -426,11 +432,17 @@ Figure 4.11: Common R chunk options - Part 2
 <h2><span class="header-section-number">4.5</span> Help -&gt; Cheatsheets</h2>
 <p>RStudio includes really nice cheatsheets that can act as great references to many of the common tasks you will do inside of RStudio. You can get nice PDF versions of the files by going to <strong>Help -&gt; Cheatsheets</strong> inside RStudio.</p>
 <div class="figure" style="text-align: center"><span id="fig:cheatsheets"></span>
-<img src="screenshots/cheatsheets.png" alt="RStudio Cheatsheets Screenshot" width="1155" />
+<img src="screenshots/cheatsheets.png" alt="RStudio Cheatsheets Screenshot" width="\textwidth" />
 <p class="caption">
 Figure 4.12: RStudio Cheatsheets Screenshot
 </p>
 </div>
+</div>
+<div id="spell-check" class="section level2">
+<h2><span class="header-section-number">4.6</span> Spell-check</h2>
+<p>Near the top of your R Markdown editor window sits one of the more useful tools for writing documents: the spell-check button. It is the green check-mark with “ABC” above it:</p>
+<p><img src="images/spellcheck.png" width="0.3\textwidth" style="display: block; margin: auto;" /></p>
+<p>Before you submit a document or share it with someone else, please run a spell-check of your document. You’ll need to add some R commands to the dictionary or ignore them since those may not be words, but it is easy to misspell words as we type and this feature can really help.</p>
 <!--
 **Exercises**
 
@@ -482,7 +494,7 @@ gitbook.start({
 "link": "https://github.com/ismayc/rbasics/edit/master/92-rmarkdown.Rmd",
 "text": null
 },
-"download": null,
+"download": ["rbasics.pdf"],
 "toc": {
 "collapse": "section",
 "scroll_highlight": true
